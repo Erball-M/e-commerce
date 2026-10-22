@@ -10,11 +10,13 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/ui": "*",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
