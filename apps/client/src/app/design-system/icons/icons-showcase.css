@@ -1,0 +1,97 @@
+#iconsShowcase {
+  --showcase-border: var(--color-black-100);
+  --showcase-muted: var(--color-black-500);
+  --showcase-ink: var(--color-black-900);
+
+  width: calc(100% - var(--spacing-06) - var(--spacing-06));
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: var(--spacing-12);
+  color: var(--showcase-ink);
+}
+
+#iconsShowcase .hero {
+  padding: var(--spacing-08);
+  border: 1px solid var(--showcase-border);
+  background: var(--color-white-100);
+}
+
+#iconsShowcase .eyebrow {
+  color: var(--color-primary-900);
+  font-size: var(--text-label);
+  letter-spacing: var(--text-label-loose--letter-spacing);
+  text-transform: uppercase;
+}
+
+#iconsShowcase .pageTitle {
+  margin: var(--spacing-03) 0 0;
+  font-size: var(--text-h1-tight);
+  font-weight: var(--text-h1-tight--font-weight);
+  line-height: var(--text-h1-tight--line-height);
+  letter-spacing: var(--text-h1-tight--letter-spacing);
+}
+
+#iconsShowcase .intro {
+  max-width: 680px;
+  margin: var(--spacing-04) 0 0;
+  color: var(--showcase-muted);
+}
+
+#iconsShowcase .section {
+  padding-block: var(--spacing-10);
+  border-bottom: 1px solid var(--showcase-border);
+}
+
+#iconsShowcase .sectionTitle {
+  margin: 0 0 var(--spacing-06);
+  font-size: var(--text-h3);
+  font-weight: var(--text-h3--font-weight);
+  line-height: var(--text-h3--line-height);
+}
+
+#iconsShowcase .iconGrid,
+#iconsShowcase .sizeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 132px), 1fr));
+  gap: var(--spacing-03);
+}
+
+#iconsShowcase .iconCard,
+#iconsShowcase .sizeCard {
+  display: grid;
+  min-width: 0;
+  min-height: 112px;
+  place-items: center;
+  align-content: center;
+  gap: var(--spacing-03);
+  border: 1px solid var(--showcase-border);
+  background: var(--color-white-900);
+  text-align: center;
+}
+
+#iconsShowcase .iconCard span,
+#iconsShowcase .sizeCard span {
+  color: var(--showcase-muted);
+  font-size: var(--text-label);
+  overflow-wrap: anywhere;
+}
+
+#iconsShowcase .usageExample {
+  overflow-x: auto;
+  margin: 0;
+  padding: var(--spacing-05);
+  border: 1px solid var(--showcase-border);
+  background: var(--color-white-100);
+  font-size: var(--text-body-regular);
+}
+
+@media (max-width: 700px) {
+  #iconsShowcase {
+    width: calc(100% - var(--spacing-04) - var(--spacing-04));
+    padding-block: var(--spacing-06);
+  }
+
+  #iconsShowcase .hero {
+    padding: var(--spacing-05);
+  }
+}
