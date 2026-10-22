@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { DesignSystemPage } from '../_components/design-system-page';
 import { BlurSection } from './_components/blur-section';
 import { BorderRadiusSection } from './_components/border-radius-section';
 import { ColorsSection } from './_components/colors-section';
@@ -18,20 +19,17 @@ export const metadata: Metadata = {
 export default function TokensPage() {
   return (
     <TokenValueProvider>
-      <main id="tokensShowcase">
-        <header className="hero">
-          <p className="eyebrow">Design system / Foundations</p>
-          <h1 className="pageTitle">CSS Tokens</h1>
-          <p className="intro">
-            A practical reference to the colors, typography, spacing, and layout
-            foundations currently defined in the application.
-          </p>
+      <DesignSystemPage
+        id="tokensShowcase"
+        title="CSS Tokens"
+        intro="A practical reference to the colors, typography, spacing, and layout foundations currently defined in the application."
+        headerContent={
           <div className="heroMeta">
             <span>Source: existing CSS theme</span>
             <span>Font: Inter via next/font</span>
           </div>
-        </header>
-
+        }
+      >
         <ColorsSection />
         <TypographySection />
         <SpacingSection />
@@ -45,7 +43,7 @@ export default function TokensPage() {
           Token values are read from the computed CSS custom properties loaded
           by the application.
         </footer>
-      </main>
+      </DesignSystemPage>
     </TokenValueProvider>
   );
 }

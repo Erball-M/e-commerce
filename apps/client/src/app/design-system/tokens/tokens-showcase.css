@@ -1,22 +1,3 @@
-#tokensShowcase {
-  --showcase-border: var(--color-black-100);
-  --showcase-muted: var(--color-black-500);
-  --showcase-ink: var(--color-black-900);
-  --showcase-surface: var(--color-white-900);
-
-  width: calc(100% - var(--spacing-06) - var(--spacing-06));
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-block: var(--spacing-12);
-  color: var(--showcase-ink);
-}
-
-#tokensShowcase .hero {
-  padding: var(--spacing-08);
-  border: 1px solid var(--showcase-border);
-  background: var(--color-white-100);
-}
-
 #tokensShowcase .eyebrow,
 #tokensShowcase .sectionNumber {
   color: var(--color-primary-900);
@@ -26,25 +7,12 @@
   text-transform: uppercase;
 }
 
-#tokensShowcase .pageTitle {
-  margin: var(--spacing-03) 0 0;
-  font-size: var(--text-h1-tight);
-  font-weight: var(--text-h1-tight--font-weight);
-  line-height: var(--text-h1-tight--line-height);
-  letter-spacing: var(--text-h1-tight--letter-spacing);
-}
-
 #tokensShowcase .intro,
 #tokensShowcase .sectionDescription,
 #tokensShowcase .supportNote,
 #tokensShowcase .footer,
 #tokensShowcase .previewCaption {
   color: var(--showcase-muted);
-}
-
-#tokensShowcase .intro {
-  max-width: 680px;
-  margin: var(--spacing-04) 0 0;
 }
 
 #tokensShowcase .heroMeta {
@@ -57,8 +25,6 @@
 }
 
 #tokensShowcase .section {
-  padding-block: var(--spacing-10);
-  border-bottom: 1px solid var(--showcase-border);
   scroll-margin-top: var(--spacing-06);
 }
 
@@ -75,9 +41,6 @@
 
 #tokensShowcase .sectionTitle {
   margin: 0;
-  font-size: var(--text-h3);
-  font-weight: var(--text-h3--font-weight);
-  line-height: var(--text-h3--line-height);
 }
 
 #tokensShowcase .sectionDescription {
@@ -110,7 +73,7 @@
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--showcase-border);
-  background: var(--showcase-surface);
+  background: var(--color-white-900);
 }
 
 #tokensShowcase .colorSwatch {
@@ -523,15 +486,6 @@
 }
 
 @media (max-width: 700px) {
-  #tokensShowcase {
-    width: calc(100% - var(--spacing-04) - var(--spacing-04));
-    padding-block: var(--spacing-06);
-  }
-
-  #tokensShowcase .hero {
-    padding: var(--spacing-05);
-  }
-
   #tokensShowcase .typeRow,
   #tokensShowcase .baselineCard {
     grid-template-columns: minmax(0, 1fr);

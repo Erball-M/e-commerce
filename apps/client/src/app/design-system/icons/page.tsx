@@ -1,5 +1,6 @@
 import { Icon, iconCategories } from '@repo/ui';
 import type { Metadata } from 'next';
+import { DesignSystemPage } from '../_components/design-system-page';
 import './icons-showcase.css';
 
 export const metadata: Metadata = {
@@ -25,15 +26,11 @@ const sizes = ['sm', 'md', 'lg', 'xl'] as const;
 
 export default function IconsPage() {
   return (
-    <main id="iconsShowcase">
-      <header className="hero">
-        <p className="eyebrow">Design system / Foundations</p>
-        <h1 className="pageTitle">Icons</h1>
-        <p className="intro">
-          A reference to the shared icons available throughout the application.
-        </p>
-      </header>
-
+    <DesignSystemPage
+      id="iconsShowcase"
+      title="Icons"
+      intro="A reference to the shared icons available throughout the application."
+    >
       {categories.map((category) => (
         <section
           className="section"
@@ -76,6 +73,6 @@ export default function IconsPage() {
           ))}
         </div>
       </section>
-    </main>
+    </DesignSystemPage>
   );
 }
