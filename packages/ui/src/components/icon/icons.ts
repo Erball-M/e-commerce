@@ -46,7 +46,7 @@ import Twitter from '../../assets/icons/social/Twitter.svg';
 import Whatsapp from '../../assets/icons/social/Whatsapp.svg';
 import Youtube from '../../assets/icons/social/Youtube.svg';
 
-export const icons = {
+const generalIcons = {
   add: Add,
   addToCart: AddToCart,
   arrowLeft: ArrowLeft,
@@ -62,20 +62,14 @@ export const icons = {
   dashboard: Dashboard,
   delivery: Delivery,
   emptyStar: EmptyStar,
-  facebook: Facebook,
-  github: Github,
-  google: Google,
   heart: Heart,
   home: Home,
   info: Info,
-  instagram: Instagram,
   key: Key,
   logout: Logout,
-  mastercard: Mastercard,
   menu: Menu,
   minus: Minus,
   more: More,
-  pinterest: Pinterest,
   product: Product,
   search: Search,
   settings: Settings,
@@ -84,16 +78,43 @@ export const icons = {
   sort: Sort,
   star: Star,
   starBadge: StarBadge,
-  telegram: Telegram,
-  twitter: Twitter,
   upload: Upload,
   user: User,
   userAlt: UserAlt,
   users: Users,
-  visa: Visa,
   warning: Warning,
+} as const;
+
+const socialIcons = {
+  facebook: Facebook,
+  github: Github,
+  instagram: Instagram,
+  pinterest: Pinterest,
+  telegram: Telegram,
+  twitter: Twitter,
   whatsapp: Whatsapp,
   youtube: Youtube,
+} as const;
+
+const coloredIcons = {
+  google: Google,
+  mastercard: Mastercard,
+  visa: Visa,
+} as const;
+
+export const icons = {
+  ...generalIcons,
+  ...socialIcons,
+  ...coloredIcons,
+} as const;
+
+const iconNames = <T extends object>(group: T) =>
+  Object.keys(group) as Array<keyof T>;
+
+export const iconCategories = {
+  general: iconNames(generalIcons),
+  social: iconNames(socialIcons),
+  colored: iconNames(coloredIcons),
 } as const;
 
 export type IconName = keyof typeof icons;
