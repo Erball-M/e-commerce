@@ -13,7 +13,9 @@
     "format:check": "prettier --check .",
     "db:generate": "turbo run db:generate",
     "db:migrate": "turbo run db:migrate",
-    "db:deploy": "turbo run db:deploy"
+    "db:deploy": "turbo run db:deploy",
+    "check:quick": "npm run format:check && npm run lint",
+    "check": "npm run format:check && npm run lint && npm run build && npm run check-types && npm run test"
   },
   "workspaces": [
     "apps/*",
